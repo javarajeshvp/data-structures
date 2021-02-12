@@ -2,7 +2,7 @@ package com.vp.ds.queue;
 
 import com.vp.ds.linkedlist.Node;
 
-public class Queue {
+public class QueueByLinkedlist {
 	private Node head;
 
 	public void add(Object data) {
