@@ -1,12 +1,12 @@
 package com.vp.ds.queue;
 
-public class Queue {
+public class QueueByArray {
 	String data[];
 	int capacity = 0;
 	int popIndex = 0;
 	int pushIndex = 0;
 
-	public Queue(int capacity) {
+	public QueueByArray(int capacity) {
 		this.capacity = capacity;
 		pushIndex = capacity;
 		popIndex = capacity;
