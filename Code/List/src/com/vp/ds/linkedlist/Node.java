@@ -25,6 +25,8 @@ public class Node implements Serializable{
 		this.data = data;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "Node [data=" + data + ", next=" + next + ", prev=" + prev + "]";
