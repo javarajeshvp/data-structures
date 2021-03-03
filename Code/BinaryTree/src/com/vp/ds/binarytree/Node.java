@@ -36,5 +36,32 @@ public class Node {
 		this.data = data;
 	}
 
+	@Override
+	public String toString() {
+		return "Node [left=" + left + ", right=" + right + ", data=" + data + "]";
+	}
+
+	/*
+	@Override
+	public String toString() {
+		//return "[" + left.getData() + "<-" + data + "->" + right.getData() + "]";
+		
+		StringBuilder out = new StringBuilder();
+		
+		if(this !=null) {
+			out.append(this.data);
+			
+			if(this.getLeft() != null) {
+				out.insert(0, this.getLeft().getData()+"<-");
+			}
+			if(this.getRight()!=null) {
+				out.append("->"+this.getRight().getData());
+			}
+		}
+			
+		return out.toString();
+		
+	}
+*/
 
 }
