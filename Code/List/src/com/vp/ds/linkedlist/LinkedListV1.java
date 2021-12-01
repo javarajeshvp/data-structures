@@ -29,7 +29,7 @@ public class LinkedListV1 {
 		}
 	}
 
-	public void deleteByData(int data) {
+	public void deleteByData(Object data) {
 		if (head.getData() == data) {
 			head = head.getNext();
 		} else {
