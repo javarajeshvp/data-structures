@@ -1,47 +1,58 @@
 package com.vp.ds.stack;
 
-public class StackByArrayV1 {
+import java.util.Arrays;
 
-	String data[];
-	int capacity = 0;
-	int top = -1;
-
+public class StackByArrayV1{
 	
+	int capacity;
+	int size=-1;
+	String data[] = null;
 	public StackByArrayV1(int capacity) {
-		this.capacity=capacity;
+		this.capacity = capacity;
 		data = new String[capacity];
 	}
 	
-	public void push(String str) {
-		if(top < capacity-1) {
-			data[++top] = str;
-			System.out.print(" Added " + str);
-		}else {
-			System.err.println(" Stack is full " + str + " not added ");
+	public boolean push(String val) {
+		boolean isPushed = false;
+		if(size < capacity)
+		{
+			size++;
+			data[size]=val;
+			isPushed =  true;
 		}
+		return isPushed;
 	}
 	
-	public String pop() {
-		String valtoPop = null;
-		if(top > -1) {
-			valtoPop = data[top];
-			data[top]=null;
-			top--;
-			System.out.print("Popping... " + valtoPop);
-		}else {
-			System.err.println(" Stack is empty ");
+	public String pop () {
+		String val=null;
+		
+		if(size != -1) {
+			val= data[size];
+			data[size] = null;
 		}
-		return valtoPop;
+		size--;
+		return val;
+		
 	}
-
-	public void display() {
-		System.out.print(" [");
-		for (String d : data) {
-			System.out.print(d);
-
-			System.out.print(",");
-		}
-		System.out.println("] " + "Current top Index " + top); 
+	
+	public void display()
+	{
+		Arrays.asList(data).forEach(System.out::println);
 	}
-
-} 
+	
+	public static void main(String arg[]) {
+	
+		
+		StackByArrayV1 stack= new StackByArrayV1(6);
+		
+		stack.push("R");
+		stack.push("A");
+		stack.push("J");
+		stack.push("E");
+		stack.push("S");
+		stack.push("H");
+		stack.pop ();
+		stack.pop ();stack.pop ();
+		stack.display();
+	}
+}
