@@ -7,15 +7,15 @@ public class BinaryTreeTest {
 		bt.insert(10);
 		bt.insert(20);
 		bt.insert(20);
-		bt.insert(15);
+		bt.insert(15);  
 		bt.insert(100);
 		System.out.println("\nIn order");
 		bt.inorder();
-		System.out.println("\nPost order");
+		System.out.println("\nPost order Rajesh");
 		bt.postorder();
 
 		System.out.println("\nPre order");
-		bt.preorder();
+		bt.preorder(); 
 
 	}
 
